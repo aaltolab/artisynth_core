@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ModelMenu xmlns="http://www.artisynth.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" maxRows="20" xsi:schemaLocation="http://www.artisynth.org src/artisynth/core/modelmenu/modelmenu.xsd">
+  <menu maxRows="20" scrolling="false" text="Demos"/>
+  <menu maxRows="20" scrolling="false" text="All demos">
+    <menu maxRows="20" scrolling="false" text="dicom">
+      <model class="artisynth.demos.dicom.DicomLoader" text="DicomLoader"/>
+      <model class="artisynth.demos.dicom.DicomTest" text="DicomTest"/>
+    </menu>
+    <menu maxRows="20" scrolling="false" text="fem">
+      <model class="artisynth.demos.fem.ArticulatedFem" text="ArticulatedFem"/>
+      <model class="artisynth.demos.fem.AttachDemo" text="AttachDemo"/>
+      <model class="artisynth.demos.fem.AttachedBeamDemo" text="AttachedBeamDemo"/>
+      <model class="artisynth.demos.fem.AttachedMuscleBeam" text="AttachedMuscleBeam"/>
+      <model class="artisynth.demos.fem.BSpline3dElementTest" text="BSpline3dElementTest"/>
+      <model class="artisynth.demos.fem.BigBeam3d" text="BigBeam3d"/>
+      <model class="artisynth.demos.fem.BodyFemAttachment" text="BodyFemAttachment"/>
+      <model class="artisynth.demos.fem.CombinedShellFem" text="CombinedShellFem"/>
+      <model class="artisynth.demos.fem.EmbeddedHeart" text="EmbeddedHeart"/>
+      <model class="artisynth.demos.fem.EmbeddedSphere" text="EmbeddedSphere"/>
+      <model class="artisynth.demos.fem.EmbeddedSurface" text="EmbeddedSurface"/>
+      <model class="artisynth.demos.fem.EmbeddedSurfaceCollide" text="EmbeddedSurfaceCollide"/>
+      <model class="artisynth.demos.fem.EmbeddedTongue" text="EmbeddedTongue"/>
+      <model class="artisynth.demos.fem.EmbeddedWeighting" text="EmbeddedWeighting"/>
+      <model class="artisynth.demos.fem.Fem3dBlock" text="Fem3dBlock"/>
+      <model class="artisynth.demos.fem.FemBeam3d" text="FemBeam3d"/>
+      <model class="artisynth.demos.fem.FemBeamMech" text="FemBeamMech"/>
+      <model class="artisynth.demos.fem.FemCollision" text="FemCollision"/>
+      <model class="artisynth.demos.fem.FemFrictionBeam" text="FemFrictionBeam"/>
+      <model class="artisynth.demos.fem.FemMuscleArm" text="FemMuscleArm"/>
+      <model class="artisynth.demos.fem.FemMuscleDemo" text="FemMuscleDemo"/>
+      <model class="artisynth.demos.fem.FemPlaneCollide" text="FemPlaneCollide"/>
+      <model class="artisynth.demos.fem.FemSkinDemo" text="FemSkinDemo"/>
+      <model class="artisynth.demos.fem.FemWithBeamBody" text="FemWithBeamBody"/>
+      <model class="artisynth.demos.fem.FishDemo" text="FishDemo"/>
+      <model class="artisynth.demos.fem.Hex3dBlock" text="Hex3dBlock"/>
+      <model class="artisynth.demos.fem.HexBeam3d" text="HexBeam3d"/>
+      <model class="artisynth.demos.fem.HexCube" text="HexCube"/>
+      <model class="artisynth.demos.fem.HexFrame" text="HexFrame"/>
+      <model class="artisynth.demos.fem.HollowSphere" text="HollowSphere"/>
+      <model class="artisynth.demos.fem.HydrostatDemo" text="HydrostatDemo"/>
+      <model class="artisynth.demos.fem.IncompressDemo" text="IncompressDemo"/>
+      <model class="artisynth.demos.fem.LeafDemo" text="LeafDemo"/>
+      <model class="artisynth.demos.fem.LockingDemo" text="LockingDemo"/>
+      <model class="artisynth.demos.fem.PlaneConstrainedFem" text="PlaneConstrainedFem"/>
+      <model class="artisynth.demos.fem.PyramidBeam3d" text="PyramidBeam3d"/>
+      <model class="artisynth.demos.fem.QuadFishDemo" text="QuadFishDemo"/>
+      <model class="artisynth.demos.fem.QuadhexBeam3d" text="QuadhexBeam3d"/>
+      <model class="artisynth.demos.fem.QuadpyramidBeam3d" text="QuadpyramidBeam3d"/>
+      <model class="artisynth.demos.fem.QuadraticLockingDemo" text="QuadraticLockingDemo"/>
+      <model class="artisynth.demos.fem.QuadraticTorus" text="QuadraticTorus"/>
+      <model class="artisynth.demos.fem.QuadtetBeam3d" text="QuadtetBeam3d"/>
+      <model class="artisynth.demos.fem.QuadwedgeBeam3d" text="QuadwedgeBeam3d"/>
+      <model class="artisynth.demos.fem.RobustCube" text="RobustCube"/>
+      <model class="artisynth.demos.fem.SelfCollision" text="SelfCollision"/>
+      <model class="artisynth.demos.fem.ShellBlock" text="ShellBlock"/>
+      <model class="artisynth.demos.fem.ShellMembraneDemo" text="ShellMembraneDemo"/>
+      <model class="artisynth.demos.fem.ShellQuadPatch" text="ShellQuadPatch"/>
+      <model class="artisynth.demos.fem.ShellTriPatch" text="ShellTriPatch"/>
+      <model class="artisynth.demos.fem.SignedDistanceCollide" text="SignedDistanceCollide"/>
+      <model class="artisynth.demos.fem.SimpleCollide" text="SimpleCollide"/>
+      <model class="artisynth.demos.fem.SingleHex" text="SingleHex"/>
+      <model class="artisynth.demos.fem.SinglePyramid" text="SinglePyramid"/>
+      <model class="artisynth.demos.fem.SingleQuadhex" text="SingleQuadhex"/>
+      <model class="artisynth.demos.fem.SingleQuadpyramid" text="SingleQuadpyramid"/>
+      <model class="artisynth.demos.fem.SingleQuadtet" text="SingleQuadtet"/>
+      <model class="artisynth.demos.fem.SingleQuadwedge" text="SingleQuadwedge"/>
+      <model class="artisynth.demos.fem.SingleShellQuad" text="SingleShellQuad"/>
+      <model class="artisynth.demos.fem.SingleShellTri" text="SingleShellTri"/>
+      <model class="artisynth.demos.fem.SingleTet" text="SingleTet"/>
+      <model class="artisynth.demos.fem.SingleWedge" text="SingleWedge"/>
+      <model class="artisynth.demos.fem.SpongeDemo" text="SpongeDemo"/>
+      <model class="artisynth.demos.fem.TetBeam3d" text="TetBeam3d"/>
+      <model class="artisynth.demos.fem.TetCube" text="TetCube"/>
+      <model class="artisynth.demos.fem.TransverseIsotropy" text="TransverseIsotropy"/>
+      <model class="artisynth.demos.fem.TubeDemo" text="TubeDemo"/>
+      <model class="artisynth.demos.fem.ViscousBeam" text="ViscousBeam"/>
+      <model class="artisynth.demos.fem.WedgeBeam3d" text="WedgeBeam3d"/>
+    </menu>
+    <menu maxRows="20" scrolling="false" text="inverse">
+      <model class="artisynth.demos.inverse.FemSurfaceTargetDemo" text="FemSurfaceTargetDemo"/>
+      <model class="artisynth.demos.inverse.ForceTargetDemo" text="ForceTargetDemo"/>
+      <model class="artisynth.demos.inverse.FrameTargetDemo" text="FrameTargetDemo"/>
+      <model class="artisynth.demos.inverse.HydrostatInvDemo" text="HydrostatInvDemo"/>
+      <model class="artisynth.demos.inverse.PointModel1d" text="PointModel1d"/>
+      <model class="artisynth.demos.inverse.PointModel2d" text="PointModel2d"/>
+      <model class="artisynth.demos.inverse.PointModel3d" text="PointModel3d"/>
+    </menu>
+    <menu maxRows="20" scrolling="false" text="mech">
+      <model class="artisynth.demos.mech.ArticulatedBeamBody" text="ArticulatedBeamBody"/>
+      <model class="artisynth.demos.mech.ArticulatedDemo" text="ArticulatedDemo"/>
+      <model class="artisynth.demos.mech.AttachedBeamBody" text="AttachedBeamBody"/>
+      <model class="artisynth.demos.mech.BeamBodyCollide" text="BeamBodyCollide"/>
+      <model class="artisynth.demos.mech.BlockTest" text="BlockTest"/>
+      <model class="artisynth.demos.mech.BodyBodyAttachment" text="BodyBodyAttachment"/>
+      <model class="artisynth.demos.mech.BodyBodyJoint" text="BodyBodyJoint"/>
+      <model class="artisynth.demos.mech.ColoredMeshDemo" text="ColoredMeshDemo"/>
+      <model class="artisynth.demos.mech.CompliantConstraintDemo" text="CompliantConstraintDemo"/>
+      <model class="artisynth.demos.mech.ConstrainedParticle" text="ConstrainedParticle"/>
+      <model class="artisynth.demos.mech.DoubleArmDemo" text="DoubleArmDemo"/>
+      <model class="artisynth.demos.mech.FrameSpringDemo" text="FrameSpringDemo"/>
+      <model class="artisynth.demos.mech.LaymanBowl" text="LaymanBowl"/>
+      <model class="artisynth.demos.mech.LaymanDemo" text="LaymanDemo"/>
+      <model class="artisynth.demos.mech.MassSpringDemo" text="MassSpringDemo"/>
+      <model class="artisynth.demos.mech.MechModelCollide" text="MechModelCollide"/>
+      <model class="artisynth.demos.mech.MechModelDemo" text="MechModelDemo"/>
+      <model class="artisynth.demos.mech.MultiMuscleDemo" text="MultiMuscleDemo"/>
+      <model class="artisynth.demos.mech.MultiSpringDemo" text="MultiSpringDemo"/>
+      <model class="artisynth.demos.mech.MuscleArm" text="MuscleArm"/>
+      <model class="artisynth.demos.mech.PlanarConnectorDemo" text="PlanarConnectorDemo"/>
+      <model class="artisynth.demos.mech.PointForceDemo" text="PointForceDemo"/>
+      <model class="artisynth.demos.mech.PuppetDemo" text="PuppetDemo"/>
+      <model class="artisynth.demos.mech.RigidBodyCollision" text="RigidBodyCollision"/>
+      <model class="artisynth.demos.mech.RigidBodyDemo" text="RigidBodyDemo"/>
+      <model class="artisynth.demos.mech.RigidCompositeCollide" text="RigidCompositeCollide"/>
+      <model class="artisynth.demos.mech.RollPitchJointDemo" text="RollPitchJointDemo"/>
+      <model class="artisynth.demos.mech.SegmentedPlaneDemo" text="SegmentedPlaneDemo"/>
+      <model class="artisynth.demos.mech.SkinDemo" text="SkinDemo"/>
+      <model class="artisynth.demos.mech.SkullParticles" text="SkullParticles"/>
+      <model class="artisynth.demos.mech.SphericalJointDemo" text="SphericalJointDemo"/>
+      <model class="artisynth.demos.mech.SpringMeshDemo" text="SpringMeshDemo"/>
+      <model class="artisynth.demos.mech.WrappedMuscleArm" text="WrappedMuscleArm"/>
+    </menu>
+    <menu maxRows="20" scrolling="false" text="renderables">
+      <model class="artisynth.demos.renderables.EditableMeshTest" text="EditableMeshTest"/>
+      <model class="artisynth.demos.renderables.Hello" text="Hello"/>
+    </menu>
+    <menu maxRows="20" scrolling="false" text="test">
+      <model class="artisynth.demos.test.AjlCollisionTest" text="AjlCollisionTest"/>
+      <model class="artisynth.demos.test.BlockTestX" text="BlockTestX"/>
+      <model class="artisynth.demos.test.CSGAnimation" text="CSGAnimation"/>
+      <model class="artisynth.demos.test.CSGCubeTest" text="CSGCubeTest"/>
+      <model class="artisynth.demos.test.ColoredSphereTest" text="ColoredSphereTest"/>
+      <model class="artisynth.demos.test.DrawModeTest" text="DrawModeTest"/>
+      <model class="artisynth.demos.test.EllipsoidWrapTest" text="EllipsoidWrapTest"/>
+      <model class="artisynth.demos.test.EmbeddedTest" text="EmbeddedTest"/>
+      <model class="artisynth.demos.test.FemBeamTest" text="FemBeamTest"/>
+      <model class="artisynth.demos.test.FemFieldTest" text="FemFieldTest"/>
+      <model class="artisynth.demos.test.FourBar" text="FourBar"/>
+      <model class="artisynth.demos.test.FrameSpringPendulum" text="FrameSpringPendulum"/>
+      <model class="artisynth.demos.test.HexTrimTest" text="HexTrimTest"/>
+      <model class="artisynth.demos.test.InstancedRenderingTest" text="InstancedRenderingTest"/>
+      <model class="artisynth.demos.test.LeafBranchDemo" text="LeafBranchDemo"/>
+      <model class="artisynth.demos.test.LinearAuxiliaryTest" text="LinearAuxiliaryTest"/>
+      <model class="artisynth.demos.test.LinearPointConstraintTest" text="LinearPointConstraintTest"/>
+      <model class="artisynth.demos.test.MappingDemo" text="MappingDemo"/>
+      <model class="artisynth.demos.test.MappingTest" text="MappingTest"/>
+      <model class="artisynth.demos.test.MeshBodyTest" text="MeshBodyTest"/>
+      <model class="artisynth.demos.test.MeshEditTest" text="MeshEditTest"/>
+      <model class="artisynth.demos.test.MeshTestBase" text="MeshTestBase"/>
+      <model class="artisynth.demos.test.MeshViewer" text="MeshViewer"/>
+      <model class="artisynth.demos.test.MinimizeAxialSpringForce" text="MinimizeAxialSpringForce"/>
+      <model class="artisynth.demos.test.MinimizeFrameSpringForce" text="MinimizeFrameSpringForce"/>
+      <model class="artisynth.demos.test.MonteCarloElementTests" text="MonteCarloElementTests"/>
+      <model class="artisynth.demos.test.MonteCarloTest" text="MonteCarloTest"/>
+      <model class="artisynth.demos.test.MultiSpringTest" text="MultiSpringTest"/>
+      <model class="artisynth.demos.test.OneBasedNumbering" text="OneBasedNumbering"/>
+      <model class="artisynth.demos.test.OpenSimSpine" text="OpenSimSpine"/>
+      <model class="artisynth.demos.test.PointMeshTest" text="PointMeshTest"/>
+      <model class="artisynth.demos.test.PolygonalMeshTest" text="PolygonalMeshTest"/>
+      <model class="artisynth.demos.test.PolylineMeshTest" text="PolylineMeshTest"/>
+      <model class="artisynth.demos.test.PressureShell" text="PressureShell"/>
+      <model class="artisynth.demos.test.QuadGridTangent" text="QuadGridTangent"/>
+      <model class="artisynth.demos.test.ReflectedBodies" text="ReflectedBodies"/>
+      <model class="artisynth.demos.test.RegularSamplingElementTests" text="RegularSamplingElementTests"/>
+      <model class="artisynth.demos.test.SDGridTest" text="SDGridTest"/>
+      <model class="artisynth.demos.test.ShellShellAttach" text="ShellShellAttach"/>
+      <model class="artisynth.demos.test.ShellVolumeAttach" text="ShellVolumeAttach"/>
+      <model class="artisynth.demos.test.SpecularTest" text="SpecularTest"/>
+      <model class="artisynth.demos.test.TextTest" text="TextTest"/>
+      <model class="artisynth.demos.test.TorusWrapTest" text="TorusWrapTest"/>
+      <model class="artisynth.demos.test.TransverseIsotropyTest" text="TransverseIsotropyTest"/>
+      <model class="artisynth.demos.test.TrimmedElements" text="TrimmedElements"/>
+      <model class="artisynth.demos.test.TwoStrandWrapBase" text="TwoStrandWrapBase"/>
+      <model class="artisynth.demos.test.WrappedShellTest" text="WrappedShellTest"/>
+    </menu>
+    <menu maxRows="20" scrolling="false" text="tutorial">
+      <model class="artisynth.demos.tutorial.BallPlateCollide" text="BallPlateCollide"/>
+      <model class="artisynth.demos.tutorial.ContactPressureRender" text="ContactPressureRender"/>
+      <model class="artisynth.demos.tutorial.CylinderWrapping" text="CylinderWrapping"/>
+      <model class="artisynth.demos.tutorial.DeformedJointedCollide" text="DeformedJointedCollide"/>
+      <model class="artisynth.demos.tutorial.FemBeam" text="FemBeam"/>
+      <model class="artisynth.demos.tutorial.FemBeamColored" text="FemBeamColored"/>
+      <model class="artisynth.demos.tutorial.FemBeamWithBlock" text="FemBeamWithBlock"/>
+      <model class="artisynth.demos.tutorial.FemBeamWithFemSphere" text="FemBeamWithFemSphere"/>
+      <model class="artisynth.demos.tutorial.FemBeamWithMuscle" text="FemBeamWithMuscle"/>
+      <model class="artisynth.demos.tutorial.FemCollisions" text="FemCollisions"/>
+      <model class="artisynth.demos.tutorial.FemEmbeddedSphere" text="FemEmbeddedSphere"/>
+      <model class="artisynth.demos.tutorial.FemMuscleBeams" text="FemMuscleBeams"/>
+      <model class="artisynth.demos.tutorial.FemMuscleHeart" text="FemMuscleHeart"/>
+      <model class="artisynth.demos.tutorial.FrameBodyAttachment" text="FrameBodyAttachment"/>
+      <model class="artisynth.demos.tutorial.FrameFemAttachment" text="FrameFemAttachment"/>
+      <model class="artisynth.demos.tutorial.InverseParticle" text="InverseParticle"/>
+      <model class="artisynth.demos.tutorial.JointedCollide" text="JointedCollide"/>
+      <model class="artisynth.demos.tutorial.JointedFemBeams" text="JointedFemBeams"/>
+      <model class="artisynth.demos.tutorial.LumbarFEMDisk" text="LumbarFEMDisk"/>
+      <model class="artisynth.demos.tutorial.LumbarFrameSpring" text="LumbarFrameSpring"/>
+      <model class="artisynth.demos.tutorial.MaterialBundleDemo" text="MaterialBundleDemo"/>
+      <model class="artisynth.demos.tutorial.NetDemo" text="NetDemo"/>
+      <model class="artisynth.demos.tutorial.NetDemoWithPan" text="NetDemoWithPan"/>
+      <model class="artisynth.demos.tutorial.NetDemoWithRefs" text="NetDemoWithRefs"/>
+      <model class="artisynth.demos.tutorial.ParticleAttachment" text="ParticleAttachment"/>
+      <model class="artisynth.demos.tutorial.ParticleSpring" text="ParticleSpring"/>
+      <model class="artisynth.demos.tutorial.PenetrationRender" text="PenetrationRender"/>
+      <model class="artisynth.demos.tutorial.PhalanxWrapping" text="PhalanxWrapping"/>
+      <model class="artisynth.demos.tutorial.PointFemAttachment" text="PointFemAttachment"/>
+      <model class="artisynth.demos.tutorial.RadialMuscle" text="RadialMuscle"/>
+      <model class="artisynth.demos.tutorial.RigidBodyJoint" text="RigidBodyJoint"/>
+      <model class="artisynth.demos.tutorial.RigidBodySpring" text="RigidBodySpring"/>
+      <model class="artisynth.demos.tutorial.RigidCompositeBody" text="RigidCompositeBody"/>
+      <model class="artisynth.demos.tutorial.SimpleMuscle" text="SimpleMuscle"/>
+      <model class="artisynth.demos.tutorial.SimpleMuscleWithController" text="SimpleMuscleWithController"/>
+      <model class="artisynth.demos.tutorial.SimpleMuscleWithInlineProbe" text="SimpleMuscleWithInlineProbe"/>
+      <model class="artisynth.demos.tutorial.SimpleMuscleWithPanel" text="SimpleMuscleWithPanel"/>
+      <model class="artisynth.demos.tutorial.SimpleMuscleWithProbes" text="SimpleMuscleWithProbes"/>
+      <model class="artisynth.demos.tutorial.SimpleMuscleWithProperties" text="SimpleMuscleWithProperties"/>
+      <model class="artisynth.demos.tutorial.SinCosMonitorProbe" text="SinCosMonitorProbe"/>
+      <model class="artisynth.demos.tutorial.SphericalTextureMapping" text="SphericalTextureMapping"/>
+      <model class="artisynth.demos.tutorial.SpinControlProbe" text="SpinControlProbe"/>
+      <model class="artisynth.demos.tutorial.TalusWrapping" text="TalusWrapping"/>
+      <model class="artisynth.demos.tutorial.TorusWrapping" text="TorusWrapping"/>
+      <model class="artisynth.demos.tutorial.VariableStiffness" text="VariableStiffness"/>
+      <model class="artisynth.demos.tutorial.ViaPointMuscle" text="ViaPointMuscle"/>
+    </menu>
+    <menu maxRows="20" scrolling="false" text="wrapping">
+      <model class="artisynth.demos.wrapping.AnalyticGeometryTests" text="AnalyticGeometryTests"/>
+      <model class="artisynth.demos.wrapping.CylinderBounceTest" text="CylinderBounceTest"/>
+      <model class="artisynth.demos.wrapping.DynamicWrapTest" text="DynamicWrapTest"/>
+      <model class="artisynth.demos.wrapping.GeneralWrapTest" text="GeneralWrapTest"/>
+      <model class="artisynth.demos.wrapping.KnotDensityTest" text="KnotDensityTest"/>
+      <model class="artisynth.demos.wrapping.KnotDensityTest2" text="KnotDensityTest2"/>
+      <model class="artisynth.demos.wrapping.KnotDensityTest3" text="KnotDensityTest3"/>
+      <model class="artisynth.demos.wrapping.TalusWrapTest" text="TalusWrapTest"/>
+      <model class="artisynth.demos.wrapping.TorusWrapTest" text="TorusWrapTest"/>
+    </menu>
+  </menu>
+  <menu maxRows="20" scrolling="false" text="Models"/>
+  <menu maxRows="20" scrolling="false" text="All models">
+    <menu maxRows="20" scrolling="false" text="irsm">
+      <menu maxRows="20" scrolling="false" text="jawsurgery">
+        <model class="artisynth.models.irsm.jawsurgery.BuildJawModel" text="BuildJawModel"/>
+        <model class="artisynth.models.irsm.jawsurgery.JawModelBaselineMotion" text="JawModelBaselineMotion"/>
+        <model class="artisynth.models.irsm.jawsurgery.JawModelForward" text="JawModelForward"/>
+        <model class="artisynth.models.irsm.jawsurgery.JawModelInverse" text="JawModelInverse"/>
+        <model class="artisynth.models.irsm.jawsurgery.JawModelInversePlayground" text="JawModelInversePlayground"/>
+      </menu>
+    </menu>
+  </menu>
+  <separator/>
+  <menu maxRows="20" scrolling="false" text="Recent">
+    <history compact="0" size="8"/>
+  </menu>
+</ModelMenu>

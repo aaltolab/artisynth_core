@@ -1,0 +1,1087 @@
+artisynth.demos.inverse.PointModel2d [ 
+  workingDir="/home/lloyd/Shared2/artisynth/mainroot/artisynth_core/src/artisynth/demos/inverse/data/point/east"
+  name="PointModel2d"
+  ComponentList<artisynth.core.modelbase.Model> [ 
+    name="models"
+    shortName="m"
+    MechModel [ 
+      name="point"
+      renderProps=[ 
+        shading=SMOOTH
+        lineStyle=CYLINDER
+        lineColor=[ 0.000 0.000 0.698 ]
+        lineRadius=0.1604
+        pointStyle=SPHERE
+        pointColor=[ 0.753 0.753 0.753 ]
+        pointRadius=0.3333333333333333
+      ]
+      penetrationLimit=0.7071067811865476
+      updateForcesAtStepEnd:Inherited 
+      gravity=[ 0.0 0.0 0.0 ]
+      integrator=Trapezoidal
+      penetrationTol=0.0014142135623730952
+      staticTikhonovFactor=-1.0
+      maxColoredExcitation=0.1
+      RenderableComponentList<artisynth.core.modelbase.RenderableComponent> [ 
+        name="renderables"
+        shortName="re"
+        renderProps=null
+      ]
+      ComponentList<artisynth.core.mechmodels.MechSystemModel> [ 
+        name="models"
+        shortName="m"
+      ]
+      PointList<Particle> [ 
+        name="particles"
+        shortName="p"
+        pointDamping:Inherited 
+        [ position=[ 0.0 0.0 10.0 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ 3.826834323650898 0.0 9.238795325112868 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ 7.071067811865475 0.0 7.0710678118654755 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ 9.238795325112868 0.0 3.8268343236508984 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ 10.0 0.0 6.123233995736766E-16 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ 9.238795325112868 0.0 -3.826834323650897 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ 7.0710678118654755 0.0 -7.071067811865475 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ 3.826834323650899 0.0 -9.238795325112868 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ 1.2246467991473533E-15 0.0 -10.0 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ -3.8268343236508966 0.0 -9.238795325112868 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ -7.071067811865475 0.0 -7.071067811865477 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ -9.238795325112864 0.0 -3.8268343236509033 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ -10.0 0.0 -1.8369701987210296E-15 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ -9.238795325112866 0.0 3.8268343236509 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ -7.071067811865477 0.0 7.071067811865474 ]
+          mass=0.001
+          dynamic=false
+        ]
+        [ position=[ -3.826834323650904 0.0 9.238795325112864 ]
+          mass=0.001
+          dynamic=false
+        ]
+      ]
+      PointList<Point> [ 
+        name="points"
+        shortName="ps"
+        pointDamping:Inherited 
+      ]
+      ComponentList<RigidBody> [ 
+        name="rigidBodies"
+        shortName="r"
+        [ name="body"
+          axisLength=0.0
+          renderProps=[ 
+            visible=false
+          ]
+          inertiaMethod=EXPLICIT
+          position=[ 0.0 0.0 0.0]
+          rotation=[ 1.0 0.0 0.0 0.0]
+          inertia=[ 0.001 0.0 0.0 0.0
+            6.400000000000001E-5 0.0 0.0
+            0.0 6.400000000000001E-5 0.0
+            0.0 0.0 6.400000000000001E-5
+          ]
+          meshes=[ 
+            name="meshes"
+            shortName="msh"
+          ]
+          distanceGrid=[ 
+            name="distanceGrid"
+            renderProps=[ 
+              visible=true
+              drawEdges=true
+              lineStyle=LINE
+              lineColor=[ 0.000 0.000 1.000 ]
+              pointSize=0
+              pointRadius=0.0
+            ]
+            renderGrid=false
+            generatingMeshes=[ ]
+          ]
+        ]
+        [ name="fixed"
+          axisLength=0.0
+          renderProps=[ 
+            visible=false
+          ]
+          inertiaMethod=EXPLICIT
+          dynamic=false
+          position=[ 0.0 0.0 0.0]
+          rotation=[ 1.0 0.0 0.0 0.0]
+          inertia=[ 0.001 0.0 0.0 0.0
+            6.400000000000001E-5 0.0 0.0
+            0.0 6.400000000000001E-5 0.0
+            0.0 0.0 6.400000000000001E-5
+          ]
+          meshes=[ 
+            name="meshes"
+            shortName="msh"
+          ]
+          distanceGrid=[ 
+            name="distanceGrid"
+            renderProps=[ 
+              visible=true
+              drawEdges=true
+              lineStyle=LINE
+              lineColor=[ 0.000 0.000 1.000 ]
+              pointSize=0
+              pointRadius=0.0
+            ]
+            renderGrid=false
+            generatingMeshes=[ ]
+          ]
+        ]
+      ]
+      ComponentList<Frame> [ 
+        name="frames"
+        shortName="fr"
+      ]
+      ComponentList<MeshComponent> [ 
+        name="meshBodies"
+        shortName="mb"
+      ]
+      PointList<FrameMarker> [ 
+        name="frameMarkers"
+        shortName="k"
+        [ attachment=[ 
+            point="frameMarkers/center"
+            frame="rigidBodies/body"
+            loc=[ 0.0 0.0 0.0 ]
+          ]
+          name="center"
+          renderProps=maspack.render.PointRenderProps [ 
+            pointColor=[ 1.000 1.000 1.000 ]
+            pointRadius=0.4
+          ]
+          pointDamping=0.1
+          refPos=[ 0.0 0.0 0.0 ]
+        ]
+      ]
+      ComponentList<BodyConnector> [ 
+        name="bodyConnectors"
+        shortName="c"
+      ]
+      RenderableComponentList<ConstrainerBase> [ 
+        name="particleConstraints"
+        shortName="pc"
+        renderProps=null
+      ]
+      ComponentList<artisynth.core.mechmodels.DynamicAttachmentComp> [ 
+        name="attachments"
+        shortName="a"
+      ]
+      AxialSpringList<AxialSpring> [ 
+        name="axialSprings"
+        shortName="as"
+        Muscle [ 
+          points=[ "particles/0" "frameMarkers/center" ]
+          name="n"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/1" "frameMarkers/center" ]
+          name="nne"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/2" "frameMarkers/center" ]
+          name="ne"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/3" "frameMarkers/center" ]
+          name="ene"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/4" "frameMarkers/center" ]
+          name="e"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/5" "frameMarkers/center" ]
+          name="ese"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/6" "frameMarkers/center" ]
+          name="se"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/7" "frameMarkers/center" ]
+          name="sse"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/8" "frameMarkers/center" ]
+          name="s"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/9" "frameMarkers/center" ]
+          name="ssw"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/10" "frameMarkers/center" ]
+          name="sw"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/11" "frameMarkers/center" ]
+          name="wsw"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/12" "frameMarkers/center" ]
+          name="w"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/13" "frameMarkers/center" ]
+          name="wnw"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/14" "frameMarkers/center" ]
+          name="nw"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+        Muscle [ 
+          points=[ "particles/15" "frameMarkers/center" ]
+          name="nnw"
+          renderProps=maspack.render.PointLineRenderProps [ 
+            lineColor=[ 0.000 0.000 0.859 ]
+          ]
+          restLength=10.0
+          material=artisynth.core.materials.LinearAxialMuscle [ 
+            passiveFraction=0.1
+            optLength=5.0
+            maxLength=16.0
+            tendonRatio:Inherited 
+            damping=0.001
+          ]
+          excitationColor=[ 1.000 0.000 0.000 ]
+          maxColoredExcitation:Inherited 
+        ]
+      ]
+      PointSpringList<MultiPointSpring> [ 
+        name="multiPointSprings"
+        shortName="ms"
+      ]
+      ComponentList<FrameSpring> [ 
+        name="frameSprings"
+        shortName="fs"
+      ]
+      ComponentList<artisynth.core.mechmodels.ForceComponent> [ 
+        name="forceEffectors"
+        shortName="f"
+      ]
+      ComponentList<MuscleExciter> [ 
+        name="exciters"
+        shortName="e"
+      ]
+      CollisionManager [ 
+        name="collisionManager"
+        renderProps=[ 
+          visible=false
+        ]
+        rigidRegionTol=0.01414213562373095
+        rigidPointTol=0.1414213562373095
+        contactNormalLen=1.4142135623730951
+        colorMapRange=[ 
+        ]
+        colorMapInterpolation:Inherited 
+        colorMap=maspack.render.color.HueColorMap [ 
+          hueRange=[ [0.6666666666666666,0.0] ]
+        ]
+        colliderType:Inherited 
+        behaviors=[ 
+          name="behaviors"
+          shortName="b"
+          [ collidable0=Rigid
+            collidable1=Rigid
+            name="Rigid-Rigid"
+            colliderType:Inherited 
+            colorMapRange=[ 
+            ]
+            colorMapInterpolation:Inherited 
+          ]
+          [ collidable0=Deformable
+            collidable1=Rigid
+            name="Deformable-Rigid"
+            colliderType:Inherited 
+            colorMapRange=[ 
+            ]
+            colorMapInterpolation:Inherited 
+          ]
+          [ collidable0=Deformable
+            collidable1=Deformable
+            name="Deformable-Deformable"
+            colliderType:Inherited 
+            colorMapRange=[ 
+            ]
+            colorMapInterpolation:Inherited 
+          ]
+          [ collidable0=Deformable
+            collidable1=Self
+            name="Deformable-Self"
+            colliderType:Inherited 
+            colorMapRange=[ 
+            ]
+            colorMapInterpolation:Inherited 
+          ]
+        ]
+        responses=[ 
+          name="responses"
+          shortName="r"
+        ]
+      ]
+    ]
+  ]
+  ComponentList<artisynth.core.modelbase.Controller> [ 
+    name="controllers"
+    shortName="c"
+    TrackingController [ 
+      name="tcon"
+      model="models/point"
+      useTrapezoidalSolver=-1
+      ReferenceListBase<ExciterComp> [ 
+        name="exciters"
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/n"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/nne"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/ne"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/ene"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/e"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/ese"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/se"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/sse"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/s"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/ssw"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/sw"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/wsw"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/w"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/wnw"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/nw"
+        ]
+        [ excitationBounds:Inherited 
+          ref="models/point/axialSprings/nnw"
+        ]
+      ]
+      MotionTargetTerm [ 
+        Kp=100.0
+        targetPoints=[ 
+          name="targetPoints"
+          renderProps=maspack.render.PointRenderProps [ 
+            pointStyle=SPHERE
+            pointColor=[ 0.000 1.000 1.000 ]
+            pointRadius=1.0
+          ]
+          pointDamping:Inherited 
+          [ name="center_ref"
+            renderProps=maspack.render.PointRenderProps [ 
+              pointStyle=SPHERE
+              pointColor=[ 0.000 1.000 1.000 ]
+              pointRadius=0.525
+            ]
+          ]
+        ]
+        sourcePoints=[ 
+          name="sourcePoints"
+          navpanelVisibility=VISIBLE
+          [ ref="models/point/frameMarkers/center"
+          ]
+        ]
+        targetFrames=[ 
+          name="targetFrames"
+          renderProps=[ 
+            faceStyle=NONE
+            drawEdges=true
+            lineColor=[ 0.000 1.000 1.000 ]
+            lineWidth=2
+            pointStyle=SPHERE
+            pointColor=[ 0.000 1.000 1.000 ]
+            pointRadius=1.0
+          ]
+        ]
+        sourceFrames=[ 
+          name="sourceFrames"
+          navpanelVisibility=VISIBLE
+        ]
+      ]
+      L2RegularizationTerm [ 
+        weight=1.0E-4
+      ]
+    ]
+  ]
+  ComponentList<artisynth.core.modelbase.Monitor> [ 
+    name="monitors"
+    shortName="mo"
+  ]
+  ComponentList<ControlPanel> [ 
+    name="controlPanels"
+    shortName="c"
+    [ name="activations"
+      size=[ 371 430 ]
+      location=[ 704 27 ]
+      options=""
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/n:excitation"
+        labelText="N"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/nne:excitation"
+        labelText="NNE"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/ne:excitation"
+        labelText="NE"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/ene:excitation"
+        labelText="ENE"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/e:excitation"
+        labelText="E"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/ese:excitation"
+        labelText="ESE"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/se:excitation"
+        labelText="SE"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/sse:excitation"
+        labelText="SSE"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/s:excitation"
+        labelText="S"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/ssw:excitation"
+        labelText="SSW"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/sw:excitation"
+        labelText="SW"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/wsw:excitation"
+        labelText="WSW"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/w:excitation"
+        labelText="W"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/wnw:excitation"
+        labelText="WNW"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/nw:excitation"
+        labelText="NW"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+      maspack.widgets.DoubleFieldSlider
+      [ property="models/point/axialSprings/nnw:excitation"
+        labelText="NNW"
+        labelFontColor=[ 0.200 0.200 0.200 ]
+        backgroundColor=[ 0.933 0.933 0.933 ]
+        format="%8f"
+        sliderRange=maspack.util.DoubleInterval [ [0.0,1.0] ]
+      ]
+    ]
+  ]
+  RenderableComponentList<Probe> [ 
+    name="inputProbes"
+    shortName="i"
+    renderProps=null
+    NumericInputProbe [ 
+      startTime=0.0
+      stopTime=1.0
+      updateInterval=0.01
+      name="target positions"
+      attachedFile="ref_targetPos_input.txt"
+      interpolationOrder=Cubic
+      displayRange=[ -0.30000000000000004 3.3 ]
+      track=0
+      model=null
+      vsize=3
+      props=[
+        "controllers/tcon/motionTerm/targetPoints/center_ref:position"
+      ]
+      drivers=[
+        "V0"
+      ]
+      inputs=[
+        V0 3
+      ]
+      data=[
+        0.0 0.0 0.0 0.0
+        0.5 3.0 0.0 0.0
+        1.0 0.0 0.0 0.0
+      ]
+      plotTraceInfo=[
+        [ order=0 label="targetPoints/center_ref:position.x" visible=true color=Red ]
+        [ order=1 label="targetPoints/center_ref:position.y" visible=true color=DarkGreen ]
+        [ order=2 label="targetPoints/center_ref:position.z" visible=true color=Blue ]
+      ]
+    ]
+    NumericInputProbe [ 
+      startTime=0.0
+      stopTime=1.0
+      updateInterval=0.01
+      name="input excitations"
+      active=false
+      attachedFile="excitations_input.txt"
+      displayRange=[ Inf -Inf ]
+      track=1
+      model=models/point
+      vsize=16
+      props=[
+        "models/point/axialSprings/n:excitation"
+        "models/point/axialSprings/nne:excitation"
+        "models/point/axialSprings/ne:excitation"
+        "models/point/axialSprings/ene:excitation"
+        "models/point/axialSprings/e:excitation"
+        "models/point/axialSprings/ese:excitation"
+        "models/point/axialSprings/se:excitation"
+        "models/point/axialSprings/sse:excitation"
+        "models/point/axialSprings/s:excitation"
+        "models/point/axialSprings/ssw:excitation"
+        "models/point/axialSprings/sw:excitation"
+        "models/point/axialSprings/wsw:excitation"
+        "models/point/axialSprings/w:excitation"
+        "models/point/axialSprings/wnw:excitation"
+        "models/point/axialSprings/nw:excitation"
+        "models/point/axialSprings/nnw:excitation"
+      ]
+      drivers=[
+        "V0"
+        "V1"
+        "V2"
+        "V3"
+        "V4"
+        "V5"
+        "V6"
+        "V7"
+        "V8"
+        "V9"
+        "V10"
+        "V11"
+        "V12"
+        "V13"
+        "V14"
+        "V15"
+      ]
+      inputs=[
+        V0 1
+        V1 1
+        V2 1
+        V3 1
+        V4 1
+        V5 1
+        V6 1
+        V7 1
+        V8 1
+        V9 1
+        V10 1
+        V11 1
+        V12 1
+        V13 1
+        V14 1
+        V15 1
+      ]
+      data=[
+      ]
+      plotTraceInfo=[
+        [ order=0 label="axialSprings/n:excitation" visible=true color=Red ]
+        [ order=1 label="axialSprings/nne:excitation" visible=true color=DarkGreen ]
+        [ order=2 label="axialSprings/ne:excitation" visible=true color=Blue ]
+        [ order=3 label="axialSprings/ene:excitation" visible=true color=Cyan ]
+        [ order=4 label="axialSprings/e:excitation" visible=true color=Magenta ]
+        [ order=5 label="axialSprings/ese:excitation" visible=true color=DarkOrange ]
+        [ order=6 label="axialSprings/se:excitation" visible=true color=Pink ]
+        [ order=7 label="axialSprings/sse:excitation" visible=true color=BlueViolet ]
+        [ order=8 label="axialSprings/s:excitation" visible=true color=NavajoWhite ]
+        [ order=9 label="axialSprings/ssw:excitation" visible=true color=Gray ]
+        [ order=10 label="axialSprings/sw:excitation" visible=true color=DarkOliveGreen ]
+        [ order=11 label="axialSprings/wsw:excitation" visible=true color=IndianRed ]
+        [ order=12 label="axialSprings/w:excitation" visible=true color=PeachPuff ]
+        [ order=13 label="axialSprings/wnw:excitation" visible=true color=Red ]
+        [ order=14 label="axialSprings/nw:excitation" visible=true color=DarkGreen ]
+        [ order=15 label="axialSprings/nnw:excitation" visible=true color=Blue ]
+      ]
+    ]
+  ]
+  RenderableComponentList<Probe> [ 
+    name="outputProbes"
+    shortName="o"
+    renderProps=null
+    NumericOutputProbe [ 
+      startTime=0.0
+      stopTime=1.0
+      updateInterval=0.01
+      name="target positions"
+      attachedFile="ref_target_position.txt"
+      displayRange=[ Inf -Inf ]
+      track=0
+      model=null
+      props=[
+        "controllers/tcon/motionTerm/targetPoints/center_ref:position"
+      ]
+      variables=[
+        P0
+      ]
+      drivers=[
+        "P0"
+      ]
+      plotTraceInfo=[
+        [ order=0 label="targetPoints/center_ref:position.x" visible=true color=Red ]
+        [ order=1 label="targetPoints/center_ref:position.y" visible=true color=DarkGreen ]
+        [ order=2 label="targetPoints/center_ref:position.z" visible=true color=Blue ]
+      ]
+    ]
+    NumericOutputProbe [ 
+      startTime=0.0
+      stopTime=1.0
+      updateInterval=0.01
+      name="model positions"
+      attachedFile="model_target_position.txt"
+      displayRange=[ Inf -Inf ]
+      track=1
+      model=null
+      props=[
+        "models/point/frameMarkers/center:position"
+      ]
+      variables=[
+        P0
+      ]
+      drivers=[
+        "P0"
+      ]
+      plotTraceInfo=[
+        [ order=0 label="frameMarkers/center:position.x" visible=true color=Red ]
+        [ order=1 label="frameMarkers/center:position.y" visible=true color=DarkGreen ]
+        [ order=2 label="frameMarkers/center:position.z" visible=true color=Blue ]
+      ]
+    ]
+    NumericOutputProbe [ 
+      startTime=0.0
+      stopTime=1.0
+      updateInterval=0.01
+      name="computed excitations"
+      attachedFile="excitations.txt"
+      displayRange=[ Inf -Inf ]
+      track=2
+      model=models/point
+      props=[
+        "models/point/axialSprings/n:excitation"
+        "models/point/axialSprings/nne:excitation"
+        "models/point/axialSprings/ne:excitation"
+        "models/point/axialSprings/ene:excitation"
+        "models/point/axialSprings/e:excitation"
+        "models/point/axialSprings/ese:excitation"
+        "models/point/axialSprings/se:excitation"
+        "models/point/axialSprings/sse:excitation"
+        "models/point/axialSprings/s:excitation"
+        "models/point/axialSprings/ssw:excitation"
+        "models/point/axialSprings/sw:excitation"
+        "models/point/axialSprings/wsw:excitation"
+        "models/point/axialSprings/w:excitation"
+        "models/point/axialSprings/wnw:excitation"
+        "models/point/axialSprings/nw:excitation"
+        "models/point/axialSprings/nnw:excitation"
+      ]
+      variables=[
+        P0
+        P1
+        P2
+        P3
+        P4
+        P5
+        P6
+        P7
+        P8
+        P9
+        P10
+        P11
+        P12
+        P13
+        P14
+        P15
+      ]
+      drivers=[
+        "P0"
+        "P1"
+        "P2"
+        "P3"
+        "P4"
+        "P5"
+        "P6"
+        "P7"
+        "P8"
+        "P9"
+        "P10"
+        "P11"
+        "P12"
+        "P13"
+        "P14"
+        "P15"
+      ]
+      plotTraceInfo=[
+        [ order=0 label="axialSprings/n:excitation" visible=true color=Red ]
+        [ order=1 label="axialSprings/nne:excitation" visible=true color=DarkGreen ]
+        [ order=2 label="axialSprings/ne:excitation" visible=true color=Blue ]
+        [ order=3 label="axialSprings/ene:excitation" visible=true color=Cyan ]
+        [ order=4 label="axialSprings/e:excitation" visible=true color=Magenta ]
+        [ order=5 label="axialSprings/ese:excitation" visible=true color=DarkOrange ]
+        [ order=6 label="axialSprings/se:excitation" visible=true color=Pink ]
+        [ order=7 label="axialSprings/sse:excitation" visible=true color=BlueViolet ]
+        [ order=8 label="axialSprings/s:excitation" visible=true color=NavajoWhite ]
+        [ order=9 label="axialSprings/ssw:excitation" visible=true color=Gray ]
+        [ order=10 label="axialSprings/sw:excitation" visible=true color=DarkOliveGreen ]
+        [ order=11 label="axialSprings/wsw:excitation" visible=true color=IndianRed ]
+        [ order=12 label="axialSprings/w:excitation" visible=true color=PeachPuff ]
+        [ order=13 label="axialSprings/wnw:excitation" visible=true color=Red ]
+        [ order=14 label="axialSprings/nw:excitation" visible=true color=DarkGreen ]
+        [ order=15 label="axialSprings/nnw:excitation" visible=true color=Blue ]
+      ]
+    ]
+  ]
+  RenderableComponentList<artisynth.core.modelbase.RenderableComponent> [ 
+    name="renderables"
+    shortName="r"
+    renderProps=null
+  ]
+  waypoints=
+  [ startTime=0.0
+    stopTime=Infinity
+    updateInterval=-1.0
+    name="WayPoints"
+    track=-1
+    model=null
+    wayPoints=[
+      [ time=0.0
+      ]
+      [ time=0.2
+      ]
+      [ time=1.0
+        breakpoint=true
+      ]
+    ]
+  ]
+]

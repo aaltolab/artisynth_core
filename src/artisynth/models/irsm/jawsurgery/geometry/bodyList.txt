@@ -1,0 +1,3 @@
+skull "maxilla_smooth.obj"
+jaw "jaw_smooth.obj"
+hyoid "hyoid.obj"

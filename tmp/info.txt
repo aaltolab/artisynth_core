@@ -1,0 +1,4 @@
+Number of frames: 251
+Width: 720
+Height: 540
+Frame rate: 50.0

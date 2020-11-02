@@ -1,0 +1,175 @@
+# Common definitions to Makefile commands used to build documentation
+
+# ARTISYNTH_WEB_ACCOUNT is a username on the ArtiSynth web server,
+# used to upload documentation to that server. If not already defined,
+# set it to the current user name
+ifndef ARTISYNTH_WEB_ACCOUNT
+   ARTISYNTH_WEB_ACCOUNT = $(USER)
+endif
+
+# Main doc directory relative to website URL. Can be set externally in
+# special cases (such as pointing to docs for a specific release)
+ifndef DOC_DIR_BASE
+   DOC_DIR_BASE = doc
+endif
+
+# Base URL for documention.
+ifndef DOC_URL_BASE
+   DOC_URL_BASE = https://www.artisynth.org/$(DOC_DIR_BASE)
+endif
+
+# Location of documentation root directory relative to HTML files
+# Assumed to be ../.. unless otherwise defined
+ifndef DOC_DIR_FROM_HTML
+   DOC_DIR_FROM_HTML = ../..
+endif
+
+# Name of the ArtiSynth webserver
+WEBSERVER = research.hct.ece.ubc.ca
+# Location of ArtiSynth material on the webserver
+WEB_HOME = /var/www/artisynth.org
+# Location of ArtiSynth documentation files on the webserver
+WEB_DOC_DIR = $(WEB_HOME)/$(DOC_DIR_BASE)
+# Full URL location of ArtiSynth documentation files on the webserver
+WEB_DOC_URL = $(ARTISYNTH_WEB_ACCOUNT)@$(WEBSERVER):$(WEB_DOC_DIR)
+
+# ssh command to fix permission of uploaded files on webserver,
+# so that all belong to the same group and have group write access
+FIX_PERMISSIONS = \
+  ssh $(ARTISYNTH_WEB_ACCOUNT)@$(WEBSERVER) $(WEB_HOME)/bin/fixMagicPerms 
+
+# Junk files produced by LaTeX
+LATEX_JUNK_FILES = *.log *.aux *.out *.toc *.bbl *.blg *.cb *.cb2
+
+# Location of binaries used for postprocessing.
+BIN_DIR = $(DOC_DIR_ROOT)/../bin
+
+# Base URL for Javadocs referenced from PDF files
+JAVADOC_PDF_URL = $(DOC_URL_BASE)/javadocs
+
+# Base URL for Javadocs referenced from HTML files
+JAVADOC_URL = $(DOC_DIR_FROM_HTML)/javadocs
+
+# LaTeXML post-processing command that turns .xml into .html
+LATEXMLPOST = latexmlpost --mathimages --format=html4 $(LATEXMLPOST_ARGS) \
+ --css=$(DOC_DIR_ROOT)/style/artisynth.css --destination=$@ \
+ --mathimagemagnification=1.5
+
+# Post-processing command for .html files created by latexmlpost.
+# Calls both setJavadocLinks to set references to Javadocs and ArtiSynth
+# manuals, and fixLatexmlOutput to fix issues in the HTML files
+FIX_HTML_OUTPUT = $(BIN_DIR)/postprocessLatexml \
+--jdocDir $(DOC_DIR_ROOT)/javadocs --jdocUrl $(JAVADOC_URL)
+
+# Post-processing command for postscript files created by dvips. Calls
+# setJavadocLinks to set references to Javadocs and ArtiSynth manuals.
+FIX_POSTSCRIPT_OUTPUT = $(BIN_DIR)/setJavadocLinks --jdocDir $(DOC_DIR_ROOT)/javadocs \
+ --jdocUrl $(JAVADOC_PDF_URL) --docBase $(DOC_DIR_BASE)/pdf --postscript
+
+# Set TEXINPUTS so latex can find the latexml and docbook input files.
+# The reason for the second entry, ../$(DOC_DIR_ROOT)/texinputs, is because
+# LaTeXML may call latex from a directory *below* that of the current
+# directory with respect to which DOC_DIR_ROOT is indicated.  NOTE: windows
+# requires semi-colon instead of colon (at least for texlive)
+ifeq ($(OS),Windows_NT)
+export TEXINPUTS:=$(TEXINPUTS);$(DOC_DIR_ROOT)/texinputs;../$(DOC_DIR_ROOT)/texinputs;
+# $(info Windows)
+# $(info TEXINPUTS: $(TEXINPUTS))
+else
+export TEXINPUTS:=$(TEXINPUTS):$(DOC_DIR_ROOT)/texinputs:../$(DOC_DIR_ROOT)/texinputs:
+# $(info Linux/OSX)
+# $(info TEXINPUTS: $(TEXINPUTS))
+endif
+
+define MAKE_HTML_DIR_IF_NECESSARY
+	@if [ ! -d $(dir $@) ] ; then \
+    		mkdir -p $(dir $@) ; \
+	fi
+endef
+
+#
+# Builds a PDF file. Assumes that first prerequisite is the primary .tex file
+#
+define BUILD_PDF
+	latex $<
+	latex $<
+	dvips -j0 $(basename $@)
+	$(FIX_POSTSCRIPT_OUTPUT) --out _tmp_.ps $(basename $@).ps
+	mv _tmp_.ps $(basename $@).ps
+	ps2pdf $(basename $@).ps
+endef
+
+#
+# Builds an HTML file. Assumes that first prerequisite is the primary .tex file
+#
+define BUILD_HTML
+	$(MAKE_HTML_DIR_IF_NECESSARY)
+	latexml $< > $(basename $<).xml
+	$(LATEXMLPOST) $(basename $<).xml
+        $(FIX_HTML_OUTPUT) --docBase $(DOC_DIR_FROM_HTML)/html $@
+endef
+
+#
+# Builds sectioned HMTL files for use by InfoCenter. Assumes that first
+# prerequisite is the primary .tex file
+#
+define BUILD_SECTIONED_HTML
+	$(MAKE_HTML_DIR_IF_NECESSARY)
+	latexml $< > $(basename $<).xml
+	$(LATEXMLPOST) --splitat=section $(basename $<).xml
+        $(FIX_HTML_OUTPUT) --docBase $(DOC_URL_BASE)/info $(dir $@)/*.html
+endef
+
+# Command to create InfoCenter table of contents files
+INFOCENTER_TOC = java artisynth.core.util.BuildInfoCenterToc
+
+# Builds TOC file for use by InfoCenter
+define BUILD_INFOCENTER_TOC
+        $(INFOCENTER_TOC) -out $@ -htmlPrefix $(subst ../,,$(dir $@)) $<
+endef
+
+# Rules to create .eps files from other image files. 
+# using eps2:file.eps creates a more compact eps file.
+%.eps: %.png
+	convert $< eps2:$@
+
+%.eps: %.jpg
+	convert $< eps2:$@
+
+# For .idr files, simply copy the file, since .idr is already an eps file
+%.eps: %.idr
+	cp $< $@
+
+%.eps: %.pdf
+	convert $< eps2:$@
+
+# for HTML, idr files should be converted to PDF using
+# epstopdf. However, right now we do this manually.
+
+.PHONY: clean CLEAN HTML PDF INFOCENTER
+
+#
+# Removes junk files
+#
+define REMOVE_JUNK_FILES
+	rm -rf *~ *.pdf *.dvi *.xml *.html
+	rm -rf *.log *.aux *.out *.toc *.bbl *.blg
+	rm -rf LaTeXML????* *.cb *.cb2 # files produced by LaTeXML
+	rm -rf *.fdb_latexmk *.synctex.gz *.fls # files produced by latexmk
+endef     
+
+#
+# Removes generated and junk files
+#
+define DO_CLEAN
+       rm -f $(HTML_DIR)/*.html $(PDF_TARG)
+       $(REMOVE_JUNK_FILES)
+endef
+
+CLEAN:: clean
+
+HTML::	html
+
+INFOCENTER::	infocenter
+
+PDF::	pdf

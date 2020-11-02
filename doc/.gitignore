@@ -1,0 +1,33 @@
+#######################
+# Latex compiled files
+#######################
+*.eps
+*.dvi
+*.aux
+*.log
+*.toc
+*.out
+*.fdb_latexmk
+*.synctex.gz
+
+#######################
+# Output documents
+#######################
+/pdf
+/html
+/javadocs
+
+#######################
+# Individual PDFs
+#######################
+/artisynth/artisynth.pdf
+/developer/codingStandard.pdf
+/documentation/documentation.pdf
+/installation/linuxInstallation.pdf
+/installation/macosInstallation.pdf
+/installation/windowsInstallation.pdf
+/maspack/maspack.pdf
+/matlabAndJython/matlabAndJython.pdf
+/modelguide/modelguide.pdf
+/uiguide/uiguide.pdf
+/updates/updates.pdf

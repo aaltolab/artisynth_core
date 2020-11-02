@@ -1,0 +1,714 @@
+[
+  NumericInputProbe 
+  [ name="Left Inferior Lateral Pterygoid"
+    startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="lip.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.15 ]
+    track=0
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lip:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Inferior Lateral Pterygoid"
+      startTime=0.0
+    stopTime=0.5
+    scale=1
+      attachedFile="rip.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.2 ]
+    track=1
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rip:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Superior Lateral Pterygoid"
+      startTime=0.0
+    stopTime=0.5
+     scale=1
+        attachedFile="lsp.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.2 ]
+    track=2
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lsp:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Superior Lateral Pterygoid"
+      startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="rsp.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.2 ]
+    track=3
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rsp:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Anterior Digastric"
+    stopTime=0.5
+    scale=1
+    attachedFile="lad.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.2 ]
+    track=4
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lad:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Anterior Digastric"
+    stopTime=0.5
+   scale=1
+      attachedFile="rad.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.2 ]
+    track=5
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rad:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Mylohyoid"
+      startTime=0.0
+    stopTime=0.5
+    scale=1
+       attachedFile="lam.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.2 ]
+    track=6
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lam:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Mylohyoid"
+      startTime=0.0
+    stopTime=0.5
+    scale=1
+
+    attachedFile="ram.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.2 ]
+    track=7
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/ram:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Geniohyoid"
+      startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="lgh.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.2 ]
+    track=8
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lgh:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Geniohyoid"
+    startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="rgh.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.2 ]
+    track=9
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rgh:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Anterior Temporal"
+  startTime=0.0
+    stopTime=0.5
+ scale=1
+    attachedFile="lat.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=10
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lat:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Anterior Temporal"
+  startTime=0.0
+    stopTime=0.5
+     scale=1
+    attachedFile="rat.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=11
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rat:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Middle Temporal"
+  startTime=0.0
+    stopTime=0.5
+     scale=1
+    attachedFile="lmt.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=12
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lmt:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Middle Temporal"
+  startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="rmt.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=13
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rmt:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Posterior Mylohyoid"
+    stopTime=0.5
+  startTime=0.0
+    scale=1
+    attachedFile="lpm.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=14
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lpm:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Posterior Mylohyoid"
+   startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="rpm.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=15
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rpm:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Superficial Masseter"
+  startTime=0.0
+    stopTime=0.5
+    scale=1  
+    attachedFile="lsm.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=16
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lsm:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Superficial Masseter"
+   startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="rsm.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.02 0.2 ]
+    track=17
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rsm:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Deep Masseter"
+  startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="ldm.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=18
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/ldm:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Deep Masseter"
+  startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="rdm.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=19
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rdm:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Medial Pterygoid"
+   startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="lmp.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=20
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lmp:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Medial Pterygoid"
+   startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="rmp.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=21
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rmp:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Left Posterior Temporal"
+   startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="lpt.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=22
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/lpt:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericInputProbe 
+  [ name="Right Posterior Temporal"
+   startTime=0.0
+    stopTime=0.5
+    scale=1
+    attachedFile="rpt.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0 1.0 ]
+    track=23
+    model=models/jawmodel
+    props=
+    [ 
+      models/jawmodel/axialSprings/rpt:excitation
+    ]
+    drivers=
+    [ 
+     "V0"
+    ]
+    inputs=
+    [ 
+      V0 1
+    ]
+  ]
+  NumericOutputProbe 
+  [ name="Muscle Forces"
+    stopTime=0.5
+    attachedFile="musclesForceNorm.raw"
+    updateInterval=0.001
+    format="%8.2f"
+    displayRange=[ 0.0 1.0 ]
+    showHeader=false
+    track=0
+    props=
+    [ 
+      models/jawmodel/axialSprings/lad:forceNorm
+      models/jawmodel/axialSprings/lip:forceNorm
+      models/jawmodel/axialSprings/lsp:forceNorm
+      models/jawmodel/axialSprings/lat:forceNorm
+      models/jawmodel/axialSprings/lmt:forceNorm
+      models/jawmodel/axialSprings/lpt:forceNorm
+      models/jawmodel/axialSprings/ldm:forceNorm
+      models/jawmodel/axialSprings/lsm:forceNorm
+      models/jawmodel/axialSprings/lmp:forceNorm
+      models/jawmodel/axialSprings/rad:forceNorm
+      models/jawmodel/axialSprings/rip:forceNorm
+      models/jawmodel/axialSprings/rsp:forceNorm
+      models/jawmodel/axialSprings/rat:forceNorm
+      models/jawmodel/axialSprings/rmt:forceNorm
+      models/jawmodel/axialSprings/rpt:forceNorm
+      models/jawmodel/axialSprings/rdm:forceNorm
+      models/jawmodel/axialSprings/rsm:forceNorm
+      models/jawmodel/axialSprings/rmp:forceNorm
+    ]
+    variables=
+    [ 
+      P0
+      P1
+      P2
+      P3
+      P4
+      P5
+      P6
+      P7
+      P8
+      P9
+      P10
+      P11
+      P12
+      P13
+      P14
+      P15
+      P16
+      P17
+    ]
+    drivers=
+    [ 
+     "P0"
+     "P1"
+     "P2"
+     "P3"
+     "P4"
+     "P5"
+     "P6"
+     "P7"
+     "P8"
+     "P9"
+     "P10"
+     "P11"
+     "P12"
+     "P13"
+     "P14"
+     "P15"
+     "P16"
+     "P17"
+    ]
+  ]
+  NumericOutputProbe 
+  [ name="Incisor Displacement"
+    stopTime=0.5
+    attachedFile="incisorDisp.raw"
+    updateInterval=0.001
+    format="%8.2f"
+    displayRange=[ -25.0 8.5 ]
+    showHeader=false
+    track=2
+    props=
+    [ 
+      models/jawmodel/frameMarkers/lowerincisor:displacement
+    ]
+    variables=
+    [ 
+      P0
+    ]
+    drivers=
+    [ 
+     "P0"
+    ]
+  ]
+  NumericOutputProbe 
+  [ name="Left Tmj Displacement"
+    stopTime=0.5
+    attachedFile="ltmjDisp.raw"
+    updateInterval=0.001
+    format="%8.2f"
+    displayRange=[ -10.0 10.0 ]
+    showHeader=false
+    track=7
+    props=
+    [ 
+      models/jawmodel/frameMarkers/ltmj:displacement
+    ]
+    variables=
+    [ 
+      P0
+    ]
+    drivers=
+    [ 
+     "P0"
+    ]
+  ]
+  NumericOutputProbe 
+  [ name="Right Tmj Displacement"
+    stopTime=0.5
+    attachedFile="rtmjDisp.raw"
+    updateInterval=0.001
+    format="%8.2f"
+    displayRange=[ -10.0 10.0 ]
+    showHeader=false
+    track=4
+    props=
+    [ 
+      models/jawmodel/frameMarkers/rtmj:displacement
+    ]
+    variables=
+    [ 
+      P0
+    ]
+    drivers=
+    [ 
+     "P0"
+    ]
+  ]
+  NumericOutputProbe 
+  [ name="Jaw Pose"
+    stopTime=0.5
+    attachedFile="jawPose.raw"
+    updateInterval=0.001
+    format="%8.2f"
+    displayRange=[ 0.0 10.0 ]
+    showHeader=false
+    track=5
+    props=
+    [ 
+      models/jawmodel/rigidBodies/jaw:pose
+    ]
+    variables=
+    [ 
+      P0
+    ]
+    drivers=
+    [ 
+     "P0"
+    ]
+  ]
+]
