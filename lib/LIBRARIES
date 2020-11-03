@@ -56,15 +56,17 @@ gdcm.jar
 # JOGL native libraries are bundled into jar files that are extracted
 # into and loaded from a temporary directory:
 # gluegen-rt-2.3.2.jar
-# jogl-all-2.3.2.jar
-gluegen-rt-2.4.0.jar
+# UNCOMMENT gluegen-rt-2.4.0.jar LINE FOR CATALINA
+jogl-all-2.3.2.jar
+# gluegen-rt-2.4.0.jar
 jogl-all-2.4.0.jar
 Linux64 gluegen-rt-2.3.2-natives-linux-amd64.jar
 Linux64 jogl-all-2.3.2-natives-linux-amd64.jar
-# MacOS gluegen-rt-2.3.2-natives-macosx-universal.jar
-# MacOS jogl-all-2.3.2-natives-macosx-universal.jar
-MacOS gluegen-rt-2.4.0-natives-macosx-universal.jar
-MacOS jogl-all-2.4.0-natives-macosx-universal.jar
+MacOS gluegen-rt-2.3.2-natives-macosx-universal.jar
+MacOS jogl-all-2.3.2-natives-macosx-universal.jar
+# UNCOMMENT gluegen-rt-2.4.0 ... LINE FOR CATALINA
+# MacOS gluegen-rt-2.4.0-natives-macosx-universal.jar
+# MacOS jogl-all-2.4.0-natives-macosx-universal.jar
 Windows32 gluegen-rt-2.3.2-natives-windows-i586.jar
 Windows32 jogl-all-2.3.2-natives-windows-i586.jar
 Windows64 gluegen-rt-2.3.2-natives-windows-amd64.jar
