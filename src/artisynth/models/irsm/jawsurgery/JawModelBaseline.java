@@ -384,9 +384,9 @@ public class JawModelBaseline extends JawModel {
       JawModel.muscleGroupInfo = readMuscleGroupsInfo (ArtisynthPath.getWorkingDirPath() + geometryFilename + muscleGroupInfoFilename);
       ArrayList<RigidBody> bodies = JawModel.assembleRigidBodies ( bodyInfoList, ArtisynthPath.getWorkingDirPath() +  (osType.startsWith("Windows") ? "\\" : "/"));
 
-      for (RigidBody body : bodies) {
-         addRigidBody (body);
-      }
+      // for (RigidBody body : bodies) {
+      //    addRigidBody (body);
+      // }
 
       setNewJawDynamicProps ();
 

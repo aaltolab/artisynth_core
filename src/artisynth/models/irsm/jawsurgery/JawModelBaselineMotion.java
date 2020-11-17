@@ -96,11 +96,11 @@ public class JawModelBaselineMotion extends RootModel {
       addBreakPoint (t);
       addOutPutProbes (t);
 
-      System.out.println("Setting view for cam pose");
-      RigidTransform3d camPose = new RigidTransform3d(new Vector3d(0,0,0), new AxisAngle(0.28155, 0.04734, 0.95838, 27.733));
-      myJawModel.rigidBodies().get("jaw").setPose(camPose);
-      myJawModel.rigidBodies().get("skull").setPose(camPose);
-      myJawModel.rigidBodies().get("hyoid").setPose(camPose);
+      // System.out.println("Setting view for cam pose");
+      // RigidTransform3d camPose = new RigidTransform3d(new Vector3d(0,0,0), new AxisAngle(0.28155, 0.04734, 0.95838, 27.733));
+      // myJawModel.rigidBodies().get("jaw").setPose(camPose);
+      // myJawModel.rigidBodies().get("skull").setPose(camPose);
+      // myJawModel.rigidBodies().get("hyoid").setPose(camPose);
       // System.out.println(myJawModel.rigidBodies().get("jaw").getPose().toString());
    }
    
