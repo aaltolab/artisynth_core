@@ -384,9 +384,9 @@ public class JawModelBaseline extends JawModel {
       JawModel.muscleGroupInfo = readMuscleGroupsInfo (ArtisynthPath.getWorkingDirPath() + geometryFilename + muscleGroupInfoFilename);
       ArrayList<RigidBody> bodies = JawModel.assembleRigidBodies ( bodyInfoList, ArtisynthPath.getWorkingDirPath() +  (osType.startsWith("Windows") ? "\\" : "/"));
 
-      // for (RigidBody body : bodies) {
-      //    addRigidBody (body);
-      // }
+      for (RigidBody body : bodies) {
+         addRigidBody (body);
+      }
 
       setNewJawDynamicProps ();
 
@@ -418,9 +418,9 @@ public class JawModelBaseline extends JawModel {
 
       addCondyleMarkers(ArtisynthPath.getWorkingDirPath() + geometryFilename + "modelFrameMarkers.csv");
 
-      for (RigidBody body : bodies) {
-         translateFrame (body);
-      }
+      // for (RigidBody body : bodies) {
+      //    translateFrame (body);
+      // }
 
       closerMuscleList = JawModel.createMuscleList(readStringList(ArtisynthPath.getWorkingDirPath() + geometryFilename+"closerMuscleList.txt"), muscleInfo, myAttachedMuscles);
       assembleBilateralExcitors(muscleList, muscleInfo, myMuscles, muscleAbbreviations);
