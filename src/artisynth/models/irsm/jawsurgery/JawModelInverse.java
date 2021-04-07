@@ -106,6 +106,9 @@ public class JawModelInverse extends RootModel {
       addMuscleProbe (t, 0.001, "forceNorm", "Muscle Forces");
       addIncisorProbe (t, 0.001, "position");
       addIncisorProbe (t, 0.001, "velocity");
+      //addition of two new probes on condyle
+      addLeftCondyleOprobe(t,0.001,"position");
+      addRightCondyleOprobe(t,0.001, "position");
 
    }
 
@@ -454,5 +457,28 @@ public class JawModelInverse extends RootModel {
       addOutputProbe (p);
 
    }
+   public void addLeftCondyleOprobe(double duration, double interval, String propName){
+      String name="ltmj"+propName;
+      NumericOutputProbe p= 
+      new NumericOutputProbe ( new Property[]{
+        myJawModel.frameMarkers().get("ltmj").getProperty(propName)}, interval);
+        p.setStartStopTimes(0.0, duration);
+        p.setName(name);
+        p.setAttachedFileName(name+"_output.txt");
+        p.setDefaultDisplayRange(-0.1,0.1);
+        addOutputProbe(p);
+      }
+  
+    public void addRightCondyleOprobe(double duration, double interval, String propName){
+        String name="rtmj"+propName;
+        NumericOutputProbe p= 
+        new NumericOutputProbe ( new Property[]{
+          myJawModel.frameMarkers().get("rtmj").getProperty(propName)}, interval);
+          p.setStartStopTimes(0.0, duration);
+          p.setName(name);
+          p.setAttachedFileName(name+"_output.txt");
+          p.setDefaultDisplayRange(-0.1,0.1);
+          addOutputProbe(p);
+        }
 
 }

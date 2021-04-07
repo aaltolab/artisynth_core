@@ -86,6 +86,9 @@ public class JawModelForward extends RootModel {
     addMuscleProbe (t, dt, "excitation", "Excitations");
     addIncisorProbe (t, dt, "position");
     addIncisorProbe (t, dt, "velocity");
+   //new probes for left and right condyle
+    addLeftCondyleOprobe(t,dt,"position");
+    addRightCondyleOprobe(t,dt, "position");
 
     RigidTransform3d T = new RigidTransform3d (0, 0, -0.001);
     myJawModel.rigidBodies ().get ("jaw").transformGeometry (T);
@@ -253,6 +256,30 @@ public class JawModelForward extends RootModel {
     addOutputProbe (p);
 
   }
+  //addition of two new probes on condyle processes 
+  public void addLeftCondyleOprobe(double duration, double interval, String propName){
+    String name="ltmj"+propName;
+    NumericOutputProbe p= 
+    new NumericOutputProbe ( new Property[]{
+      myJawModel.frameMarkers().get("ltmj").getProperty(propName)}, interval);
+      p.setStartStopTimes(0.0, duration);
+      p.setName(name);
+      p.setAttachedFileName(name+"_output.txt");
+      p.setDefaultDisplayRange(-0.1,0.1);
+      addOutputProbe(p);
+    }
+
+  public void addRightCondyleOprobe(double duration, double interval, String propName){
+      String name="rtmj"+propName;
+      NumericOutputProbe p= 
+      new NumericOutputProbe ( new Property[]{
+        myJawModel.frameMarkers().get("rtmj").getProperty(propName)}, interval);
+        p.setStartStopTimes(0.0, duration);
+        p.setName(name);
+        p.setAttachedFileName(name+"_output.txt");
+        p.setDefaultDisplayRange(-0.1,0.1);
+        addOutputProbe(p);
+      }
 
   public void setIncisorVisible () {
     FrameMarker inc = myJawModel.frameMarkers ().get ("lowerincisor");
@@ -266,6 +293,5 @@ public class JawModelForward extends RootModel {
     inc.setLocation (loc);
     enableTracing (inc);
     addIncisorTrace = true;
-
   }
 }
